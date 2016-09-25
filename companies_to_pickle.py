@@ -37,4 +37,4 @@ def init_companies():
 
     print('Number of companies: {}'.format(len(companies)))
 
-    #save_with_pickle(companies)
+    save_with_pickle(companies)
