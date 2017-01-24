@@ -7,7 +7,8 @@ from company_parser import CompanyParser
 
 
 def companies_generator():
-    """ Iterates through the list and returns dict with company site on 'dou.ua' and company name"""
+    """ Iterates through the list and returns dict with company site on 'dou.ua' and company name
+    """
     url = 'https://jobs.dou.ua/ratings/'
 
     req = Request(url)
@@ -22,15 +23,16 @@ def companies_generator():
 
 
 def init_companies():
-    """ Main function """
-    company_parser = CompanyParser()
+    """ Main function
+    """
     companies = []
+    company_parser = CompanyParser()
     companies_gen = companies_generator()
-    counter = 0
-    for company in companies_gen:
+
+    for counter, company in enumerate(companies_gen):
         new_company = company_parser.get_new_company(company)
         companies.append(new_company)
-        counter += 1
+
         print(counter)
         # if counter == 10:
         #      break

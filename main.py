@@ -6,8 +6,8 @@ from companies_to_pickle import init_companies
 if __name__ == '__main__':
     # start = timer()
 
-    init_companies()  # creates pickle file with list of companies
-    generate_html_page()  # generates html page from pickle file
+    init_companies()        # creates pickle file with list of companies
+    generate_html_page()    # generates html page from pickle file
 
     # end = timer()
     # print(end - start)
